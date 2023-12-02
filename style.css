@@ -1,0 +1,185 @@
+@charset "ISO-8859-1";
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Sofia", sans-serif;
+    }
+    
+    body {
+        display: flex;
+        min-height: 100vh;
+        align-items: center;
+        justify-content: center;
+        background: url('https://c1.wallpaperflare.com/preview/646/32/967/sunset-ocean-water-waves.jpg');
+        background-size: cover;
+        position: relative;
+        animation: backgroundAnimation 20s linear infinite;
+        /* Added animation for background movement */
+    }
+    
+    @keyframes backgroundAnimation {
+        0% {
+            background-position: 0% 0%;
+        }
+        100% {
+            background-position: 100% 100%;
+        }
+    }
+    
+    .datetimeday {
+        text-align: center;
+        font-style: bold;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 30px;
+        color: black;
+        text-shadow: 2px 2px 4px #20172b;
+    }
+    
+    .mainContainer {
+        width: 80%;
+        max-width: 35rem;
+        height: auto;
+        border-radius: 1rem;
+        background: rgba(25, 24, 34, 0.65);
+        box-shadow: 0 14px 28px rgba(32, 67, 255, 0.25), 0 10px 10px rgba(138, 13, 13, 0.26);
+        margin-top: 12%;
+    }
+    
+    .searchInput {
+        width: 100%;
+        display: flex;
+        padding: 1rem 1rem;
+        justify-content: center;
+    }
+    
+    .searchInput input {
+        width: 100%;
+        height: 2rem;
+        outline: none;
+        font-size: 1rem;
+        color: #525050;
+        padding: 0.2rem 0.5rem;
+        border-radius: 1.5rem;
+        border: 1px solid #b3b3b3;
+    }
+    
+    .searchInput input:focus {
+        border: 1px solid #9c9dde;
+    }
+    
+    .searchInput button {
+        width: 2.2rem;
+        height: 2rem;
+        cursor: pointer;
+        color: #9b9b9b;
+        border-radius: 50%;
+        margin-left: 0.4rem;
+        transition: all 0.3s ease;
+        background-color: #fff;
+        border: 1px solid #b3b3b3;
+    }
+    
+    .searchInput button:hover {
+        color: #fff;
+        background-color: #9c9dde;
+        border: 1px solid #9c9dde;
+    }
+    
+    .weatherIcon {
+        display: flex;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        justify-content: center;
+        color: #eae4cf;
+    }
+    
+    .weatherIcon img {
+        max-width: 100%;
+        width: 8rem;
+    }
+    
+    .weatherDetails .temp {
+        font-size: 2rem;
+    }
+    
+    
+    .cityDetails {
+        color: #eae4cf;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .cityDetails .date {
+        color: #eae4cf;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    
+    .windDetails {
+        display: flex;
+        margin-top: 1rem;
+        margin-bottom: 1.5rem;
+        justify-content: space-around;
+    }
+    
+    .windDetails .humidityBox {
+        display: flex;
+        font-size: 1rem;
+        color: #eae4cf;
+    }
+    
+    .windDetails .humidity .humidityValue {
+        text-align: center;
+        font-size: 2rem;
+        color: #eae4cf;
+    }
+    
+    .windDetails .humidityBox img {
+        max-height: 3rem;
+        margin-right: 0.5rem;
+    }
+    
+    .windDetails .windSpeed {
+        display: flex;
+        font-size: 1rem;
+        color: #eae4cf;
+    }
+    
+    .windDetails .windSpeed img {
+        max-height: 3rem;
+        margin-right: 0.5rem;
+    }
+    
+    image-logo {
+        height: auto;
+        width: auto;
+        filter: drop-shadow(20px 10px 10px rgb(236, 234, 234));
+    }
+    
+    @media screen and (max-width: 768px) {
+        .mainContainer {
+            width: 90%;
+            /* Adjusted for smaller screens */
+        }
+        .searchInput {
+            flex-direction: column;
+            align-items: center;
+        }
+        .searchInput input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    
+    @media screen and (max-width: 576px) {
+        .mainContainer {
+            width: 95%;
+            /* Further adjustment for smaller screens */
+        }
+    }
